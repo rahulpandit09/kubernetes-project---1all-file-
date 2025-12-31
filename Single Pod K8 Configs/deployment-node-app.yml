@@ -5,7 +5,7 @@ metadata:
   name: my-nodedb-app
 spec:
   # 3 Pods should exist at all times.
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: nodedb-app
@@ -18,7 +18,6 @@ spec:
     spec:
       containers:
       - name: nodedb-app
-        # Run this image
-        image: rahulkashyap09/node-mongo-db:04
+        image: philippaul/node-mongo-db:02
       - name: mongodb
-        image: mongo:latest  
+        image: mongo:latest
